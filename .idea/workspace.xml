@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="018efd34-a95a-4063-a79b-dbc862fff7f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/GiftCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/RedeemableServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/firstTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/technicalTest.java" afterDir="false" />
+    <list default="true" id="018efd34-a95a-4063-a79b-dbc862fff7f3" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GiftCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GiftCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/RedeemableServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/RedeemableServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,25 +43,7 @@
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.RedeemableServices.viewCleaningService">
-    <configuration name="GiftCard.getGiftCard" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="API_Test_Automation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.GiftCard" />
-      <option name="METHOD_NAME" value="getGiftCard" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.RedeemableServices.redeemCleaningService">
     <configuration name="RedeemableServices" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="API_Test_Automation" />
       <extension name="coverage">
@@ -81,6 +55,24 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.RedeemableServices" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedeemableServices.redeemCleaningService" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="API_Test_Automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.RedeemableServices" />
+      <option name="METHOD_NAME" value="redeemCleaningService" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -143,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RedeemableServices.redeemCleaningService" />
         <item itemvalue="TestNG.RedeemableServices.viewCleaningService" />
         <item itemvalue="TestNG.RedeemableServices" />
         <item itemvalue="TestNG.RedeemableServices.redeemLaundryService" />
         <item itemvalue="TestNG.RedeemableServices.viewLaundryServiceDetails" />
-        <item itemvalue="TestNG.GiftCard.getGiftCard" />
       </list>
     </recent_temporary>
   </component>
@@ -160,6 +152,14 @@
       <option name="presentableId" value="Default" />
       <updated>1668524041916</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1670426763842</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670426763842</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,5 +172,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>

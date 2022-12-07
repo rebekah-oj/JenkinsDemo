@@ -107,7 +107,7 @@ public class RedeemableServices {
     RestAssured.baseURI = "https://api-staging-testanything.edenlife.ng";
 
     Response response = given()
-            .header("Authorization", "Bearer" + token)
+            .header("Authorization", "Bearer" + cleaningToken)
             .header("Content-Type", "application")
             .when()
             .get("api/v3/garden/wallet/laundry/paused_service_details")
@@ -141,7 +141,7 @@ public class RedeemableServices {
 
             System.out.println(payload);
        Response response = given()
-            .header("Authorization", "Bearer" + token).header("Content-Type", "application/json")
+            .header("Authorization", "Bearer" + cleaningToken).header("Content-Type", "application/json")
             .and()
             .body(payload)
             .when()
@@ -156,19 +156,20 @@ public class RedeemableServices {
 
     }
 
+    String cleaningToken = " eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzOCIsImp0aSI6IjY0NjQzNTY1OTFmYzkyZTk0ZWU2MjQ5YzI0ZTgzMTM1NzY1Y2JhYzMxOGE5MzE3NzhkMWJhNTNiMDE0MzdkNDM1NWFhZGRkMmM3NGJjMDViIiwiaWF0IjoiMTY3MDQyNjA3OC4yOTgzMzUiLCJuYmYiOiIxNjcwNDI2MDc4LjI5ODM0MSIsImV4cCI6IjE3MDE5NjIwNzguMjkzNzkyIiwic3ViIjoiMjgxNTAiLCJzY29wZXMiOltdfQ.KHoBkly0WDxyOk5pcrKNkprISS9HDy4S-0feTeBl-y9kHPgW31KxXfJI6aqq0UrPWMy2h8szAkk0NCgjp3VRFNjObvrVNNze-glfcaPGshwmwGrxp52J7pqREATYisrfVf_jDdfIS0EdHWybC4qNDyq0TqXmXa5XkdI8Mgzr97VSTSxrei5uEtt58mCKH_x5aS6NhsaXUHG_ovDoOH2CLCjrcDnH05l--lw9vgkDOVS_-E4fprg0slNl4nRNfvb1J8lVJMQYw3hQb3UCPfJYws_RMg4clz1Nv8J5WVU6PmQcGAePV5nuNXV1MxwSp8DA3kD1yWPmsqlVeYJ0lhJO5aMGDJw5qG8ecLeic7TBtQbapE4gIlaIO_5EKj3AkvjsNhN7mGJrMMBe67eKdMYfGPFegAw9OTrxSgETsKjOcow8rRQ7XGiTV1QLUvjF9zhHjX5LhSZgytulKCAKlBJIvTHwhjNlItImrKQ8-1ZMnk45B4X96ya9qu5w5uwdw5XIxTgXmOE_m4i4D-6oPjKKPtsrp_j8ZabaLtPxTUi3JBEPhyl1e1nxtAm-LYQZ0ZX8J78x7kSLP7IdlZhVpKxEJcOSInD92T3YG5t1kWOJlPhYdNmDVRjdbmO6WF7FnlK0ew8y8N0PUgGSA-GgUW1P6WnkQznwQz1ImRo50o-mVvQ";
+
     @Test
     public void viewCleaningService(){
-
-    String token = " eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzOCIsImp0aSI6IjY0NjQzNTY1OTFmYzkyZTk0ZWU2MjQ5YzI0ZTgzMTM1NzY1Y2JhYzMxOGE5MzE3NzhkMWJhNTNiMDE0MzdkNDM1NWFhZGRkMmM3NGJjMDViIiwiaWF0IjoiMTY3MDQyNjA3OC4yOTgzMzUiLCJuYmYiOiIxNjcwNDI2MDc4LjI5ODM0MSIsImV4cCI6IjE3MDE5NjIwNzguMjkzNzkyIiwic3ViIjoiMjgxNTAiLCJzY29wZXMiOltdfQ.KHoBkly0WDxyOk5pcrKNkprISS9HDy4S-0feTeBl-y9kHPgW31KxXfJI6aqq0UrPWMy2h8szAkk0NCgjp3VRFNjObvrVNNze-glfcaPGshwmwGrxp52J7pqREATYisrfVf_jDdfIS0EdHWybC4qNDyq0TqXmXa5XkdI8Mgzr97VSTSxrei5uEtt58mCKH_x5aS6NhsaXUHG_ovDoOH2CLCjrcDnH05l--lw9vgkDOVS_-E4fprg0slNl4nRNfvb1J8lVJMQYw3hQb3UCPfJYws_RMg4clz1Nv8J5WVU6PmQcGAePV5nuNXV1MxwSp8DA3kD1yWPmsqlVeYJ0lhJO5aMGDJw5qG8ecLeic7TBtQbapE4gIlaIO_5EKj3AkvjsNhN7mGJrMMBe67eKdMYfGPFegAw9OTrxSgETsKjOcow8rRQ7XGiTV1QLUvjF9zhHjX5LhSZgytulKCAKlBJIvTHwhjNlItImrKQ8-1ZMnk45B4X96ya9qu5w5uwdw5XIxTgXmOE_m4i4D-6oPjKKPtsrp_j8ZabaLtPxTUi3JBEPhyl1e1nxtAm-LYQZ0ZX8J78x7kSLP7IdlZhVpKxEJcOSInD92T3YG5t1kWOJlPhYdNmDVRjdbmO6WF7FnlK0ew8y8N0PUgGSA-GgUW1P6WnkQznwQz1ImRo50o-mVvQ";
 
         RestAssured.baseURI = "https://api-staging-testanything.edenlife.ng";
 
       Response response = given()
-              .header("Authorization", "Bearer" + token)
+              .header("Authorization", "Bearer" + cleaningToken)
               .header("Content-Type", "application/json")
               .when()
               .get("/api/v3/garden/wallet/cleaning/paused_service_details")
               .then()
+
               .extract().response();
 
       response.prettyPrint();
@@ -176,6 +177,50 @@ public class RedeemableServices {
 
       Assert.assertEquals(200, response.statusCode());
       Assert.assertEquals("Cleaning service details retrieved successfully", message);
+    }
+
+    @Test
+    public void redeemCleaningService(){
+
+        String payload = """
+                {
+                "service_items": [
+                          {
+                            "deliver_to_customer": "2022-12-12 00:00:00",
+                             "customer_order_id": 1129595,
+                             "qty": 1,
+                              "item": "standard-cleaning",
+                              "item_areas": {
+                              "bedrooms": 3,
+                              "living-rooms-dining-areas": 1,
+                               "bathrooms": 3,
+                               "kitchen": 1,
+                                "study": 2,
+                                "balcony": 2
+                              }\040\040\040\040\040\040\040\040\040\040\040\040\040
+                          }
+                        ]
+                }""";
+
+        System.out.println(payload);
+
+        RestAssured.baseURI = "https://api-staging-testanything.edenlife.ng";
+
+        Response response = given()
+                .header("Authorization", "Bearer" + cleaningToken)
+                .header("Content-Type", "application/json")
+                .and()
+                .body(payload)
+                .when()
+                .post("/api/v3/garden/wallet/redeem/cleaning")
+                .then()
+                .extract().response();
+
+        response.prettyPrint();
+        String message = response.getBody().path("message");
+
+        Assert.assertEquals(200, response.statusCode());
+        Assert.assertEquals("Cleaning services redeemed successfully", message);
     }
 }
 
